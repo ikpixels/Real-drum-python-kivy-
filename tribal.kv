@@ -1,0 +1,553 @@
+Main_scren:
+    Trup_Kits:
+    Tribal_Kits:
+    Raggea_Kits:
+    piano:
+    final:
+#===========================Home===========
+<Trup_Kits>:
+    name:"home"
+    BoxLayout:
+        orientation:'vertical'
+        padding:10
+        BoxLayout:
+            size_hint_y:None
+            height:root.height*0.1
+            canvas:
+                Color:
+                    rgba:1,1,1,1
+                Rectangle:
+                    size:self.size
+                    pos:self.pos
+            Image:
+                source:"icon/drum.png"
+        BoxLayout:
+            Image:
+                source:"icon/tribal.png"
+        Button:
+            size_hint_y:None
+            height:root.height*0.1
+            text:"Trap Drums"
+            on_press:app.root.current="trap"
+        Button:
+            size_hint_y:None
+            height:root.height*0.1
+            text:"Vinyl Drums"
+            on_press:app.root.current="tribal"
+        Button:
+            size_hint_y:None
+            height:root.height*0.1
+            text:"House Drums"
+            on_press:app.root.current="raggea"
+        Button:
+            size_hint_y:None
+            height:root.height*0.1
+            text:"Tribal Drums"
+            on_press:app.root.current="piano"
+
+#===================Trup===================
+<Tribal_Kits>:
+    name:"trap"
+    BoxLayout:
+        orientation:'vertical'
+        padding:50
+        spacing:20
+        BoxLayout:
+            size_hint_y:None
+            height:root.height*0.0
+            Label:
+                text:"widgets"
+
+        BoxLayout:
+            size_hint_y:None
+            height:root.height*0.1
+            canvas:
+                Color:
+                    rgba:1,1,1,1
+                Rectangle:
+                    size:self.size
+                    pos:self.pos
+            Button:
+                on_press:app.root.current="home"
+                background_normal:"home.png"
+            BoxLayout:
+                Label:
+                    
+                    text:"Piano"
+                    color:0,0,1,1
+                    font_size:20
+                BoxLayout:
+                Switch:
+            BoxLayout:
+            BoxLayout:
+                Label:
+                    id:noti
+                    text:"Drums"
+                    color:0,1,0,1
+                    font_size:50
+                
+            BoxLayout:
+                Image:
+                    id:source
+                    source:""
+                        
+            Label:
+                text:"TRAP DRUMS"
+                color:0,0,0,1   
+        StackLayout:
+            spacing:20
+            Button:
+                text:'Kick'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.kick()
+                on_press:noti.text="Kick"
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                on_release:noti.text=""
+                background_down:"icon/ik.png"
+            Button:
+                text:'Snare'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.snare()
+                on_press:noti.text="Snare"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
+            Button:
+                text:'Hat'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.hat()
+                on_press:noti.text="Hat"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
+            Button:
+                text:'808'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.w_808()
+                on_press:noti.text="808"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
+            Button:
+                text:'Cymbal'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.cybal()
+                on_press:noti.text="Cymbal"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
+            Button:
+                text:'Fx'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.fx()
+                on_press:noti.text="Fx"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
+            Button:
+                text:'Clap'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.clap()
+                on_press:noti.text="Clap"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
+            Button:
+                text:'Chant'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.chant()
+                on_press:noti.text="Chants"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
+    
+#=====================Trap=============================================
+<Raggea_Kits>:
+    name:"tribal"
+    BoxLayout:
+        orientation:'vertical'
+        padding:50
+        spacing:20
+        BoxLayout:
+            size_hint_y:None
+            height:root.height*0.1
+            canvas:
+                Color:
+                    rgba:1,1,1,1
+                Rectangle:
+                    size:self.size
+                    pos:self.pos
+            Button:
+                on_press:app.root.current="home"
+                background_normal:"icon/home.png"
+            BoxLayout:
+                Label:
+                    text:"Piano"
+                    color:0,0,1,1
+                    font_size:20
+                BoxLayout:
+                Switch:
+            BoxLayout:
+                
+            BoxLayout:
+                Label:
+                    id:noti
+                    text:"Drums"
+                    color:0,1,0,1
+                    font_size:50
+                
+            BoxLayout:
+                Image:
+                    id:source
+                    source:""
+            Label:
+                text:"VINYL DRUMS"
+                color:0,0,0,1    
+        StackLayout:
+            spacing:20
+            Button:
+                text:'Kick'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.v_kick()
+                on_press:noti.text="Kick"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
+            Button:
+                text:'Snare'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.v_snare()
+                on_press:noti.text="Snare"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
+            Button:
+                text:'Hats'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.v_hat()
+                on_press:noti.text="Hat"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
+            Button:
+                text:'perc'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.perc()
+                on_press:noti.text="Perc"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
+            Button:
+                text:'Clap'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.v_clap()
+                on_press:noti.text="Clap"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
+            Button:
+                text:'Loop'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.loop3()
+                on_press:noti.text="Loop"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
+            Button:
+                text:'Loop'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.loop()
+                on_press:noti.text="Loop"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
+                
+            Button:
+                text:'Loop'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.loop2()
+                on_press:noti.text="Loop"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
+         
+         
+#==========================Raggea==========================================
+<piano>:
+    name:"raggea"
+    BoxLayout:
+        orientation:'vertical'
+        padding:50
+        spacing:20
+        BoxLayout:
+            size_hint_y:None
+            height:root.height*0.1
+            canvas:
+                Color:
+                    rgba:1,1,1,1
+                Rectangle:
+                    size:self.size
+                    pos:self.pos
+            Button:
+                on_press:app.root.current="home"
+                background_normal:"home.png"
+            BoxLayout:
+                Label:
+                    text:"Piano"
+                    color:0,0,1,1
+                    font_size:20
+                BoxLayout:
+                Switch:
+            BoxLayout:
+            BoxLayout:
+                Label:
+                    id:noti
+                    text:"Drums"
+                    color:0,1,0,1
+                    font_size:50
+                
+            BoxLayout:
+                Image:
+                    id:source
+                    source:""
+            Label:
+                text:"HOUSE DRUMS"
+                color:0,0,0,1    
+        StackLayout:
+            spacing:20
+            Button:
+                text:'Kick'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.h_kick()
+                on_press:noti.text="Kick"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
+            Button:
+                text:'Snare'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.h_snare()
+                on_press:noti.text="Snare"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
+            Button:
+                text:'Hat'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.h_hat()
+                on_press:noti.text="Hat"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
+            Button:
+                text:'Percussion'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.percussion()
+                on_press:noti.text="Percussion"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
+            Button:
+                text:'Clap'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.h_clap()
+                on_press:noti.text="Clap"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
+            Button:
+                text:'Tom'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.h_tom()
+                on_press:noti.text="Tom"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
+            Button:
+                text:'Rim'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.h_rim()
+                on_press:noti.text="Rim"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
+            Button:
+                text:'Cymbal'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.h_cybal()
+                on_press:noti.text="Cymbal"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
+
+#=========================piano======================================
+<final>:
+    name:"piano"
+    BoxLayout:
+        orientation:'vertical'
+        padding:50
+        spacing:20
+        BoxLayout:
+            size_hint_y:None
+            height:root.height*0.1
+            canvas:
+                Color:
+                    rgba:1,1,1,1
+                Rectangle:
+                    size:self.size
+                    pos:self.pos
+            Button:
+                on_press:app.root.current="home"
+                background_normal:"home.png"
+            BoxLayout:
+                Label:
+                    text:"Piano"
+                    color:0,0,1,1
+                    font_size:20
+                BoxLayout:
+                Switch:
+            BoxLayout:
+            BoxLayout:
+                Label:
+                    id:noti
+                    text:"Drums"
+                    color:0,1,0,1
+                    font_size:50
+                
+            BoxLayout:
+                Image:
+                    id:source
+                    source:""
+            Label:
+                text:"TRIBAL DRUMS"
+                color:0,0,0,1     
+        StackLayout:
+            spacing:20
+            Button:
+                text:'Kick'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.t_kick()
+                on_press:noti.text="Kick"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
+            Button:
+                text:'Cymbal'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.t_cybal()
+                on_press:noti.text="Cymbal"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
+            Button:
+                text:'Conga'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.conga()
+                on_press:noti.text="Conga"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
+            Button:
+                text:'Shaker'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.shaker()
+                on_press:noti.text="Shaker"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
+            Button:
+                text:'Rim'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.t_rim()
+                on_press:noti.text="Rim"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
+            Button:
+                text:' Bongo'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.bongo()
+                on_press:noti.text="Bongo"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
+            Button:
+                text:'Loop'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.loop()
+                on_press:noti.text="Loop"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
+            Button:
+                text:'Loop'
+                size_hint:None,None
+                size:root.width*0.2, root.height*0.3
+                on_press:root.loop2()
+                on_press:noti.text="Loop"
+                on_release:noti.text=""
+                on_press:source.source="ikpic.png"
+                on_release:source.source=""
+                background_down:"icon/ik.png"
